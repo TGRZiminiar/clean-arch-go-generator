@@ -91,5 +91,23 @@ EOL
 # ---------------- REPOSITORY ---------------- 
 
 
+# ---------------- SERVER Module Name ----------------
+cd ../..
+mkdir -p "server"
+touch "server/${FILENAME}.go"
+
+cat <<EOL > "server/${FILENAME}.go"
+package server
+
+func (s *server) ${FILENAME}Service() {
+	${FILENAME}Repo := ${FILENAME}repository.New${FIRST_CAPITALIZED_F}Repository(s.db)
+	${FILENAME}Usecase := ${FILENAME}usecase.New${FIRST_CAPITALIZED_F}sUsecase(${FILENAME}Repo)
+	${FILENAME}HttpHandler := ${FILENAME}handler.New${FIRST_CAPITALIZED_F}sHttpHandler(s.cfg, ${FILENAME}Usecase)
+	
+	_ = ${FILENAME}HttpHandler
+}
+
+EOL
+# ---------------- SERVER Module Name ----------------
 
 echo "Folder and file structure for ${FILENAME} created successfully."
