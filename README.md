@@ -26,7 +26,7 @@ chmod +x generate-module.sh
 ```
 
 ### 6. Import the library following this file priority
-1. modules/product/productRepository/productRepository.go
-2. modules/product/productUsecase/productUsecase.go
-3. modules/product/productHttpHandler/productHttpHandler.go
-4. server/product.go
+1. modules/{module name}/{module name}Repository/{module name}Repository.go
+2. modules/{module name}/{module name}Usecase/{module name}Usecase.go
+3. modules/{module name}/{module name}HttpHandler/{module name}HttpHandler.go
+4. server/{module name}.go
