@@ -1,9 +1,8 @@
 package productusecase
 
-import productrepository "tgrziminiar/shell-go-clean-arch/modules/product/productRepository"
-
 type (
 	ProductUsecaseService interface {
+
 	}
 
 	productUsecase struct {

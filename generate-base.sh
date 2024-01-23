@@ -131,7 +131,7 @@ func Start(pctx context.Context, cfg *config.Config, db any) {
 	s.httpListening()
 
 }
-
 EOL
 
 # ---------------- SERVER ----------------
+

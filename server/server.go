@@ -57,10 +57,7 @@ func Start(pctx context.Context, cfg *config.Config, db any) {
 	// Body Limit
 	// app.Settings.MaxRequestBodySize = 10 * 1024 * 1024 // 10 MB
 
-	switch s.cfg.App.Name {
-	case "":
-		s.Service()
-	}
+	// Call the server service here
 
 	// Graceful Shutdown
 	quit := make(chan os.Signal, 1)

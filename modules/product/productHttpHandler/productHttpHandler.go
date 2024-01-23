@@ -1,7 +1,5 @@
 package producthttphandler
 
-import productusecase "tgrziminiar/shell-go-clean-arch/modules/product/productUsecase"
-
 type (
 	ProductHttpHandlerService interface {
 	}
